@@ -1,45 +1,73 @@
 import java.util.*;
+
 public class Matrix_add 
 {
-    int i,j,l,r,c,x,y;
-    int[] arr2;
-    int[] arr1;
-    int[] arr;
-    void input()
+    
+    int i, j, r, c;
+    int[][] arr2;
+    int[][] arr1;
+    int[][] arr;
+
+    void input() 
     {
-      Scanner in = new Scanner(System.in);
-      System.out.println("Enter the row");
-      r=in.nextInt();
-      System.out.println("Enter the column");
-      c=in.nextInt();
-      arr=new int[r][c];
-      arr1 = new int[r]][c];
-      arr2 = new int[r][c]
-      System.out.println("Enter the first matrix");
-      for(i=0;i<l;i++)
-      {
-        for(j=0;j<l;j++)
-         {
-          System.out.print("Enter the value in cell"); 
-          arr1[i][j]=in.nextInt();
-         }
-      }
-      System.out.println("Enter the second matrix");
-      for(i=0;i<l;i++)
-      {
-        for(j=0;j<l;j++)
-         {
-          System.out.print("Enter the value in cell"); 
-          arr2[i][j]=in.nextInt();
-         }
-      }
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the number of rows:");
+        r = in.nextInt();
+        System.out.println("Enter the number of columns:");
+        c = in.nextInt();
+
+        arr = new int[r][c];
+        arr1 = new int[r][c];
+        arr2 = new int[r][c];
+
+        System.out.println("Enter the first matrix:");
+        for (i = 0; i < r; i++) 
+        {
+            for (j = 0; j < c; j++) 
+            {
+                System.out.print("Enter the value in cell [" + i + "][" + j + "]: ");
+                arr1[i][j] = in.nextInt();
+            }
+        }
+
+        System.out.println("Enter the second matrix:");
+        for (i = 0; i < r; i++) 
+        {
+            for (j = 0; j < c; j++) 
+            {
+                System.out.print("Enter the value in cell [" + i + "][" + j + "]: ");
+                arr2[i][j] = in.nextInt();
+            }
+        }
     }
-    void add()
+
+    void add() {
+        for (int x = 0; x < r; x++) 
+        {
+            for (int y = 0; y < c; y++) 
+            {
+                arr[x][y] = arr1[x][y] + arr2[x][y];
+            }
+        }
+    }
+
+    void print() {
+        System.out.println("\nThe resulting matrix is:");
+        for (int x = 0; x < r; x++) 
+        {
+            for (int y = 0; y < c; y++) 
+            {
+                System.out.print(arr[x][y] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void main(String args[]) 
     {
-      for(x=0;x<l;x++)
-      {
-       for(y=0;y<l;y++)
-        arr[x][y]=arr1[x][y]+arr[x][y];
-      }
+        Matrix_add ob = new Matrix_add();
+        ob.input();
+        ob.add();
+        ob.print();
     }
 }
