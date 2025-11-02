@@ -1,7 +1,7 @@
 import java.util.*;
 public class r9
 {
-    int n,i,num=1;
+    int n,i,nm=1;
     void input()
     {
         Scanner in = new Scanner(System.in);
@@ -12,11 +12,11 @@ public class r9
     {
        for(i=1;i<=n;i++)
        {
-           num*=i;
+           nm*=i;
        }
     }
     void display()
     {
-        System.out.println("Factorial of "+n+":"+num);
+        System.out.println("Factoriall of "+n+" : "+nm);
     }
 }
