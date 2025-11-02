@@ -8,7 +8,7 @@ public class Matrix_add
     int[][] arr1;
     int[][] arr;
 
-    void input() 
+    Matrix_add() 
     {
         Scanner in = new Scanner(System.in);
         System.out.println("Enter the number of rows:");
@@ -68,7 +68,6 @@ public class Matrix_add
     public static void main(String args[]) 
     {
         Matrix_add ob = new Matrix_add();
-        ob.input();
         ob.add();
         ob.print();
     }
