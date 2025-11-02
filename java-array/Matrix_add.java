@@ -39,8 +39,10 @@ public class Matrix_add
                 arr2[i][j] = in.nextInt();
             }
         }
-    }
+        in.close();
+      }
 
+  
     void add() {
         for (int x = 0; x < r; x++) 
         {
