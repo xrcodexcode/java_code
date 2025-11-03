@@ -1,7 +1,7 @@
 import java.util.*;
 public class Array_diaongal
 {
-    int i,j,r,c;
+    int i,j,r,c,k,d1,d2,a;
     int[][] arr;
     void input()
     {
@@ -20,5 +20,28 @@ public class Array_diaongal
         }
       } 
     }
-    
+    void logic()
+    {
+        d1=0;
+        d2=0;
+        a=3;
+        for(k=0;k<r;k++)
+        {
+         d1+=arr[k][k];
+         d2+=arr[k][a];
+         a--;
+        }
+    }
+    void println()
+    {
+        System.out.println("left diagonal:"+d1);
+        System.out.println("right diagonal:"+d2);
+    }
+    public static void main(String args[])
+    {
+        Array_diaongal ob = new Array_diaongal();
+        ob.input();
+        ob.logic();
+        ob.println();
+    }
 }
