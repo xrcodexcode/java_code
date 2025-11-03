@@ -3,7 +3,7 @@ import java.util.*;
 public class Matrix_add 
 {
     
-    int i, j, r, c;
+    int i, j, r, c,k;
     int[][] arr2;
     int[][] arr1;
     int[][] arr;
