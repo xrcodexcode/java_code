@@ -13,9 +13,9 @@ public class transpose_matrix
      System.out.println("enter number of column in matrix");
      c=in.nextInt();
      arr=new int[r]][c];
-     for(i=0;i<l;i++)
+     for(i=0;i<r;i++)
      {
-        for(j=0;j<l;j++)
+        for(j=0;j<c;j++)
         {
         
             System.out.print("Enter the element in array at ["+i+"]"+"["+j+"]");
@@ -25,6 +25,7 @@ public class transpose_matrix
 
      }
      in.close();
+     
 
     }
     public static void main(String args[])
