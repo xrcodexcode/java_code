@@ -1,0 +1,47 @@
+import java.util.*;
+public class Array_diaongal
+{
+    int i,j,r,c,k,d1,d2,a;
+    int[][] arr;
+    void input()
+    {
+      Scanner in = new Scanner(System.in);
+      System.out.println("Enter number of rows:");
+      r=in.nextInt();
+      System.out.println("Enter number of column");
+      c=in.nextInt();
+      arr=new int[r][c];
+      for(i=0;i<r;i++)
+      {
+        for(j=0;j<c;j++)
+        {
+         System.out.print("Enter the element at ["+i+"] row and ["+j+"] column");
+         arr[i][j]=in.nextInt();
+        }
+      } 
+    }
+    void logic()
+    {
+        d1=0;
+        d2=0;
+        a=3;
+        for(k=0;k<r;k++)
+        {
+         d1+=arr[k][k];
+         d2+=arr[k][a];
+         a--;
+        }
+    }
+    void println()
+    {
+        System.out.println("left diagonal:"+d1);
+        System.out.println("right diagonal:"+d2);
+    }
+    public static void main(String args[])
+    {
+        Array_diaongal ob = new Array_diaongal();
+        ob.input();
+        ob.logic();
+        ob.println();
+    }
+}
