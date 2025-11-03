@@ -17,5 +17,6 @@ public class r10
         }
         System.out.println();
     }
+    System.out.println();
    }
 }
