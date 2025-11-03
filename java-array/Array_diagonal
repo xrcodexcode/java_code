@@ -16,6 +16,7 @@ public class Array_diaongal
         for(j=0;j<c;j++)
         {
          System.out.print("Enter the element at ["+i+"] row and ["+j+"] column");
+         arr[i][j]=in.nextInt();
         }
       } 
     }
