@@ -1,0 +1,28 @@
+import java.util.*;
+public class al1
+{
+    int i,j;
+    public static void (String args[])
+    {
+     Scanner in = new Scanner(System.in);
+     ArrayList<String> list = new ArrayList<>();
+     System.out.print("Enter how many numbers you want to add: ");
+     int n = in.nextInt();
+
+    for (int i = 0; i < n; i++) 
+      {
+            System.out.print("Enter number " + (i + 1) + ": ");
+            int value = in.nextInt();
+            list.add(value);
+      }
+
+    System.out.println("Your ArrayList: " + list);
+
+     list.add("A");         // add element
+     list.get(0);           // access element
+     list.set(0, "B");      // update element
+     list.remove(0);        // remove element
+     list.size();           // length
+
+    }
+}
