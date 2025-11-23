@@ -1,28 +1,60 @@
 import java.util.*;
-public class al1
-{
-    int i,j;
-    public static void (String args[])
-    {
-     Scanner in = new Scanner(System.in);
-     ArrayList<String> list = new ArrayList<>();
-     System.out.print("Enter how many numbers you want to add: ");
-     int n = in.nextInt();
 
-    for (int i = 0; i < n; i++) 
-      {
-            System.out.print("Enter number " + (i + 1) + ": ");
-            int value = in.nextInt();
-            list.add(value);
-      }
+public class al1 {
+    public static void main(String[] args) {
+        // 1. Creation
+        ArrayList<String> list = new ArrayList<>();
+        System.out.println("1. Created empty ArrayList: " + list);
 
-    System.out.println("Your ArrayList: " + list);
+        // 2. Adding elements
+        list.add("Apple");
+        list.add("Banana");
+        list.add("Cherry");
+        System.out.println("2. Added elements: " + list);
 
-     list.add("A");         // add element
-     list.get(0);           // access element
-     list.set(0, "B");      // update element
-     list.remove(0);        // remove element
-     list.size();           // length
+        // Add at specific index
+        list.add(1, "Blueberry");
+        System.out.println("   Added 'Blueberry' at index 1: " + list);
 
+        // 3. Accessing elements
+        String element = list.get(2);
+        System.out.println("3. Element at index 2: " + element);
+
+        // 4. Updating elements
+        list.set(0, "Apricot");
+        System.out.println("4. Updated index 0 to 'Apricot': " + list);
+
+        // 5. Removing elements
+        list.remove(3); // Remove by index
+        System.out.println("5. Removed element at index 3: " + list);
+        
+        list.remove("Blueberry"); // Remove by object
+        System.out.println("   Removed 'Blueberry': " + list);
+
+        // 6. Size and Status
+        System.out.println("6. Size of list: " + list.size());
+        System.out.println("   Is list empty? " + list.isEmpty());
+
+        // 7. Searching
+        boolean containsBanana = list.contains("Banana");
+        System.out.println("7. Contains 'Banana'? " + containsBanana);
+        
+        int index = list.indexOf("Banana");
+        System.out.println("   Index of 'Banana': " + index);
+
+        // 8. Sorting
+        Collections.sort(list);
+        System.out.println("8. Sorted list: " + list);
+
+        // 9. Iteration
+        System.out.print("9. Iterating using for-each: ");
+        for (String str : list) {
+            System.out.print(str + " ");
+        }
+        System.out.println();
+        
+        // Clear
+        list.clear();
+        System.out.println("10. Cleared list: " + list);
     }
 }
